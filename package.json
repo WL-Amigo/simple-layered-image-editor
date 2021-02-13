@@ -5,7 +5,9 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "lint:fix": "eslint './src/**/*.{ts,vue}' --fix && prettier --write './src/**/*.{ts,vue}'"
+    "lint:fix": "eslint './src/**/*.{ts,vue}' --fix && prettier --write './src/**/*.{ts,vue}'",
+    "preinstall": "npx only-allow pnpm",
+    "prebuild": "test \"$CI\" = true && npx pnpm install --store=node_modules/.pnpm-store || echo skiping pnpm install"
   },
   "dependencies": {
     "konva": "^7.2.3",
@@ -29,6 +31,7 @@
     "eslint-plugin-vue": "^7.5.0",
     "fs-extra": "^9.1.0",
     "license-checker": "^25.0.1",
+    "pnpm": "^5.17.1",
     "postcss": "^8.2.6",
     "prettier": "^2.2.1",
     "tailwindcss": "^2.0.3",
