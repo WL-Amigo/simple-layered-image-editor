@@ -16,7 +16,7 @@
             <span>)、</span>
             <ex-link href="https://twitter.com/oreno_ani">カツサダ</ex-link>
           </div>
-          <ex-link href="" class="flex flex-row items-center">
+          <ex-link href="https://github.com/WL-Amigo/simple-layered-image-editor" class="flex flex-row items-center">
             <github-icon class="w-6 h-6" />
             <span class="pl-1">リポジトリ</span>
           </ex-link>
