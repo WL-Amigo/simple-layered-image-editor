@@ -23,7 +23,6 @@ export const LicenseGeneratorPlugin = (): Plugin => {
       if (id === ModuleName) {
         return ModuleName;
       }
-      return false;
     },
     async load(id) {
       if (id !== ModuleName) {
