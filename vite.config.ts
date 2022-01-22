@@ -3,6 +3,7 @@ import { resolve as pathResolve } from 'path';
 import vue from '@vitejs/plugin-vue';
 import vueSvgPlugin from 'vite-plugin-vue-svg';
 import { LicenseGeneratorPlugin } from './vite-plugins/LicenseGenerator';
+import WindiCSS from 'vite-plugin-windicss';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,6 +17,7 @@ export default defineConfig({
     vueSvgPlugin({
       defaultExport: 'component',
     }),
+    WindiCSS(),
     LicenseGeneratorPlugin(),
   ],
 });

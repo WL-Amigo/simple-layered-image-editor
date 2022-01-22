@@ -1,6 +1,6 @@
 import { createApp, defineComponent, h } from 'vue';
 import App from './App.vue';
-import './main.css';
+import 'virtual:windi.css';
 import { useDependencySetupper } from './services/SetupDependencies';
 
 createApp(
