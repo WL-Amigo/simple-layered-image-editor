@@ -16,7 +16,7 @@ type License = {
   url?: string;
 };
 
-export const LicenseGeneratorPlugin = (): Plugin => {
+export const LicenseGeneratorPlugin = (excludes?: readonly string[]): Plugin => {
   return {
     name: 'license-generator',
     resolveId(id) {
@@ -52,6 +52,10 @@ export const LicenseGeneratorPlugin = (): Plugin => {
         let depKey = d;
         if (v.startsWith('npm:')) {
           depKey = v.slice(0, v.lastIndexOf('@')).replace('npm:', '');
+        }
+
+        if (excludes?.includes(depKey)) {
+          continue;
         }
         const license = allLicenses.get(depKey);
         if (license === undefined) {
