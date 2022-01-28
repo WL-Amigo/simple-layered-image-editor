@@ -1,7 +1,10 @@
-import { Component } from 'solid-js';
+import { Component, createSignal } from 'solid-js';
 import { ExtLink } from './ExternalLink';
+import { LicenseModal } from './LicenseModal';
 
 export const Footer: Component = () => {
+  const [isLicenseModalOpen, setIsLicenseModalOpen] = createSignal(false);
+
   return (
     <div class="w-full h-12 bg-blue-200 flex flex-row justify-between items-center px-4">
       <div>Simple Layered Image Editor (仮)</div>
@@ -15,10 +18,11 @@ export const Footer: Component = () => {
         <span>'s </span>
         <ExtLink href="https://twitter.com/oreno_ani/status/1356902652404092930">tweet</ExtLink>
         <span>. </span>
-        <button>
+        <button onClick={() => setIsLicenseModalOpen(true)}>
           <span class="underline">licenses</span>
         </button>
       </div>
+      <LicenseModal isOpen={isLicenseModalOpen()} onClose={() => setIsLicenseModalOpen(false)} />
     </div>
   );
 };

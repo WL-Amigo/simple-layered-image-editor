@@ -12,5 +12,5 @@ export default defineConfig({
       '@': pathResolve(__dirname, '/src'),
     },
   },
-  plugins: [Solid(), WindiCSS(), Icon({ compiler: 'solid' }), LicenseGeneratorPlugin()],
+  plugins: [Solid(), WindiCSS(), Icon({ compiler: 'solid' }), LicenseGeneratorPlugin(['@iconify-json/bx'])],
 });
