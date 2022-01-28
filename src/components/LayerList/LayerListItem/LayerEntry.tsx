@@ -28,7 +28,7 @@ export const LayerEntryListItem: Component<Props> = (props) => {
     <div
       class={LayerItemCommonStyle}
       onDragOver={onDragEnterOrOver}
-      ondragenter={onDragEnterOrOver}
+      onDragEnter={onDragEnterOrOver}
       onDragLeave={onDragLeave}
       onDrop={onDrop}
     >

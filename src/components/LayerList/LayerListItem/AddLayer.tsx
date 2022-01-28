@@ -29,7 +29,7 @@ export const AddLayerListItem: Component<Props> = (props) => {
           areaDynamicClasses(),
         )}
         onDragOver={onDragEnterOrOver}
-        ondragenter={onDragEnterOrOver}
+        onDragEnter={onDragEnterOrOver}
         onDragLeave={onDragLeave}
         onDrop={onDrop}
       >
@@ -42,7 +42,7 @@ export const AddLayerListItem: Component<Props> = (props) => {
         id="add-image-layer"
         multiple
         class="hidden"
-        oninput={onInput}
+        onInput={onInput}
       />
     </label>
   );
